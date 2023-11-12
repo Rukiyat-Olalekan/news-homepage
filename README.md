@@ -2,17 +2,14 @@
 
 The challenge is to build a news website homepage using HTML, CSS amd basic Javascript.
 
-
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+- [The challenge](#the-challenge)
 - [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author](#author)
-
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
 
 ## Overview
 
@@ -28,9 +25,9 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS
+- CSS Animation
 - Flexbox
-- CSS Grid
 
 ### What I learned
 
@@ -38,7 +35,4 @@ During this project, I learnt more about creating responsive navbar using HTML a
 
 ### Continued development
 
-I need to focus more website interactivity as this was my challenge during this project.
-
-## Author
-- Frontend Mentor - [@rukkyy](https://www.frontendmentor.io/profile/rukkky)
+I need to focus more on website interactivity as this was my challenge during this project.
