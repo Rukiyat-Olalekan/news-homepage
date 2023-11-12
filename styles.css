@@ -10,13 +10,16 @@ body {
   overflow: scroll;
 }
 header {
-  margin: 1.5rem;
+  margin: 1.5rem 0;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+.logo {
+  display: none;
 }
 ul {
   list-style: none;
@@ -40,6 +43,10 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(35, 77%, 62%);
 }
 p {
   line-height: 1.5;
@@ -62,8 +69,15 @@ p {
 }
 .flex {
   display: flex;
-  justify-content: space-between;
+  gap: 5rem;
   align-items: center;
+}
+.menu-bar {
+  position: absolute;
+  right: 5px;
+}
+#menu-button {
+  display: block;
 }
 .menu-bar button {
   background-color: inherit;
@@ -73,6 +87,20 @@ p {
 }
 .menu-items.active {
   display: block;
+  line-height: 4;
+  background-color: white;
+  box-shadow: 5px 5px 20px 2px rgba(175, 175, 175, 0.5);
+  padding: 1rem 10rem 3rem 1rem;
+  z-index: 2;
+  font-weight: 900;
+  animation: slide 500ms ease-out;
+  position: absolute;
+  right: 2%;
+  top: 20%;
+}
+.menu-items li:hover,
+.menu-items li:focus {
+  color: hsl(5, 85%, 63%);
 }
 .button {
   margin: 1rem 0 1.5rem 0;
@@ -129,29 +157,46 @@ footer {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media (min-width: 1440px) {
-  nav {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    gap: 34rem;
-    margin-left: 5rem;
-  }
-  ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
   }
 
-  .menu-bar {
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 1440px) {
+  nav {
+    width: 70%;
+    margin: auto 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: block;
+  }
+
+  #menu-button {
     display: none;
   }
   .menu-items {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+  }
+  .menu-items li:hover {
+    background-color: hsl(5, 85%, 63%);
+    color: white;
   }
   button {
     padding: 0.5rem 1.5rem;
     letter-spacing: normal;
+  }
+  .flex {
+   gap: 1rem;
+   margin-right: 2rem;
   }
   main {
     width: 80%;
